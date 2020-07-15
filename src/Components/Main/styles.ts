@@ -5,7 +5,7 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  width: min-content(601px, 100%);
+  width: min(601px, 100%);
 
   @media(min-width: 500px){
     border-left: 1px solid var(--outline);
@@ -71,12 +71,14 @@ export const BottomMenu = styled.div`
   z-index: 2;
 
   background: var(--primary);
+
+  width: 100%;
   display: flex;
   justify-content: space-between;
 
   padding: 8px min(46px, max(10vw, 10px));
 
-  @media( min-windth: 500px){
+  @media( min-width: 500px){
     display: none;
   }
 
