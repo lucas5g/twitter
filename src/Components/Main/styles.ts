@@ -64,13 +64,34 @@ export const ProfileInfo = styled.div`
   }
 `
 
-export const ButtomMenu = styled.div``;
+export const BottomMenu = styled.div`
+  position: fixed;
+  bottom:0;
+  left: 0;
+  z-index: 2;
+
+  background: var(--primary);
+  display: flex;
+  justify-content: space-between;
+
+  padding: 8px min(46px, max(10vw, 10px));
+
+  @media( min-windth: 500px){
+    display: none;
+  }
+
+`;
 
 const iconCSS = css`
   width: 31px;
   height: 31px;
 
   cursor: pointer;
+
+  &:hover,
+  &.active{
+    fill: var(--twitter)
+  }
 
   fill: font-variant(--gray);
 `
